@@ -56,12 +56,20 @@ const Cards = () => {
                 // when window width is >= 640px
                 640: {
                   width: 640,
-                  slidesPerView: 2,
+                  slidesPerView: 1,
                 },
                 // when window width is >= 768px
                 768: {
                   width: 768,
-                  slidesPerView: 3,
+                  slidesPerView: 2,
+                },
+                1080: {
+                    width: 980,
+                    slidesPerView: 3,
+                  },
+                1680: {
+                    width: 1680,
+                    slidesPerView: 4,
                 },
                 }}
                 spaceBetween={50}
