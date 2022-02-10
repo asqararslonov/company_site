@@ -3,6 +3,9 @@
   --gray: #8F8F8F;
   --border-color: rgba(0,130,244,0.1);
 }
+.overflow{
+  overflow: hidden;
+}
 /* Header Section  */
 .header{
   display: flex;

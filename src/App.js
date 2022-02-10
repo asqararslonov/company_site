@@ -11,13 +11,16 @@ import './App.css';
 const App = ()=> {
   return (
     <>
-      <Header />
+    <div className="overflow">
+    <Header />
       <Hero />
       <Community />
       <Features />
       <Card />
       <Sigin />
       <Footer />
+    </div>
+      
     </>
   );
 }
