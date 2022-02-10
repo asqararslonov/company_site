@@ -1,6 +1,5 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
-import {Autoplay} from 'swiper';
 
 import 'swiper/css';
 import cardimg from '../assets/card1.png';
