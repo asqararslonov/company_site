@@ -1,5 +1,6 @@
 import React from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
+import {motion} from 'framer-motion';
 
 import 'swiper/css';
 import cardimg from '../assets/card1.png';
@@ -44,21 +45,42 @@ const cards = [
 ]
 
 const Cards = () => {
+    const textAnimation = {
+        hidden: {
+          opacity: 0.5,
+        },
+        visible: {
+          opacity: 1,
+          transition: { delay:  0.5 }, 
+        },
+      }
+    const animation = {
+        hidden: {
+          x: 100,
+          opacity: 0,
+        },
+        visible: custom => ({
+          x: 0,
+          opacity: 1,
+          transition: { delay: custom * 0.2 }, 
+        }),
+      }
   return (
     <>
-        <div className='card'>
+        <motion.div
+            initial="hidden"
+            whileInView="visible" 
+            className='card'>
             <div className='card-header'>
-                <div className='card-title'>What Our Customers are Saying.</div>
+                <motion.div variants={textAnimation} className='card-title'>What Our Customers are Saying.</motion.div>
             </div>
             <div className='card-body'>
             <Swiper
                 breakpoints={{
-                // when window width is >= 640px
                 640: {
                   width: 640,
                   slidesPerView: 1,
                 },
-                // when window width is >= 768px
                 768: {
                   width: 768,
                   slidesPerView: 2,
@@ -79,7 +101,7 @@ const Cards = () => {
                 {
                     cards.map((card, index) => (
                         <SwiperSlide key={index}>
-                    <div className='card-item'>
+                    <motion.div custom={index} variants={animation} className='card-item'>
                         <div className='card-img'>
                             <img src={card.img} alt='card-item' />
                         </div>
@@ -94,13 +116,13 @@ const Cards = () => {
                                 {card.profession}
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 </SwiperSlide>
                     ))
                 }
             </Swiper>
             </div>
-        </div>
+        </motion.div>
     </>
     );
 };
