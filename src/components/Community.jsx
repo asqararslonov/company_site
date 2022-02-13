@@ -18,7 +18,8 @@ const Community = () => {
     <>
      <motion.div 
         initial="hidden"
-        whileInView="visible" 
+        whileInView="visible"
+        viewport={{once:true}} 
         className="community"> 
      <motion.div custom={1} variants={animation} className='community-item-img'>
                 <img src={community} alt='community' />

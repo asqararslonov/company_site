@@ -14,6 +14,10 @@
   padding: .3rem 1rem;
   border-bottom: 1px solid var(--border-color);
 }
+.header-logo> img{
+  height: 4vh;
+  padding-top: 0.3rem;
+}
 .header-item{
   display: flex;
   align-items: center;
@@ -30,7 +34,7 @@
 .header-item li+li{
   margin-left: 1rem;
 }
-.header-btn{
+.header>.header-btn{
   background-color: var(--blue);
   padding: .5rem 1rem;
   border-radius: .25rem;
@@ -40,6 +44,48 @@
 }
 .header-btn:hover{
   background-color: rgb(3, 114, 211);
+  cursor: pointer;
+}
+.header-hamburger{
+  background-color: var(--blue);
+  padding: .25rem .5rem;
+  border-radius: .25rem;
+  border: none;
+  color: white;
+  font-size: 1rem;
+}
+.header-btn:hamburger{
+  background-color: rgb(3, 114, 211);
+}
+.header-mobile-menu>.header-item{
+  display:flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 0;
+  padding: .5rem 0;
+  font-size: 1rem;
+  color: white;
+  background-color: #0082F4;
+}
+.header-mobile-menu>.header-item>li {
+  transition: all 1s ease-in;
+}
+.header-mobile-menu>.header-item>li:hover {
+  cursor: pointer;
+  color: white;
+}
+.header-mobile-menu>.header-item>li:hover {
+  text-decoration: underline;
+}
+.header-mobile-menu>.header-item li+li{
+  margin-left: 0;
+  margin-top: .5rem;
+}
+/* Hamburger */
+.hamburger-button{
+  background: none;
+  border: 0;
   cursor: pointer;
 }
 /* Hero Section */
@@ -363,7 +409,7 @@
 }
 @media screen and (max-width:768px) {
   .hero{
-    height: 40vh;
+    height: 55vh;
   }
   .features-title{
     font-size: 2rem;
@@ -378,11 +424,12 @@
     margin: 10px;
   }
 }
-@media screen and (max-width:600px) {
+@media screen and (max-width:650px) {
   .hero{
     flex-direction: column;
     justify-content: flex-start;
     margin-top: 2rem;
+    padding: 0 1rem;
   }
   .hero-item{
     width: 100%;
@@ -395,6 +442,7 @@
     flex-direction: column;
   }
   .community-item{
+    margin-top: 2rem;
     width: 80vw;
   }
   .hero-item-img>img,.community-item-img>img{
@@ -428,6 +476,9 @@
   }
   .footer-item + .footer-item{
     margin-left: 0;
+  }
+  .header-logo> img{
+    height:4vh;
   }
 }
 @media screen and (max-width:400px) {

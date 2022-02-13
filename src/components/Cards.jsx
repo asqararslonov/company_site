@@ -70,6 +70,7 @@ const Cards = () => {
         <motion.div
             initial="hidden"
             whileInView="visible" 
+            viewport={{once:true}}
             className='card'>
             <div className='card-header'>
                 <motion.div variants={textAnimation} className='card-title'>What Our Customers are Saying.</motion.div>

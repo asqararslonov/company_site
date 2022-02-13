@@ -30,6 +30,7 @@ const Hero = () => {
                 initial="hidden"
                 whileInView="visible"
                 variants={textVariants}
+                viewport={{once:true}}
                 className='hero-item'
                 >
                 <div className='hero-blue-text'>Smart Buissnes</div>
