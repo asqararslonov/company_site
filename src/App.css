@@ -425,9 +425,12 @@
   }
 }
 @media screen and (max-width:650px) {
+  .header-logo> img{
+    height:4vh;
+  }
   .hero{
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 2rem;
     padding: 0 1rem;
   }
@@ -463,6 +466,10 @@
   .features-imgs>img{
     width: 40vw;
   }
+  .features-paragrf{
+    padding: 0 1rem;
+    text-align: center
+  }
   .card{
     margin: 3rem 1rem;
   }
@@ -477,10 +484,24 @@
   .footer-item + .footer-item{
     margin-left: 0;
   }
-  .header-logo> img{
-    height:4vh;
+  
+}
+@media screen and (max-width:450px){
+  .hero{
+    height: 40vh;
+  }
+  .hero-title-text, .hero-title-text>.hero-blue-text{
+    font-size: 2.5rem;
+  }
+  .card-title{
+    font-size: 1.5rem;
+  }
+  .features{
+    margin: 5rem 0 3rem 0;
   }
 }
+
+/* Swiper Media Queries*/
 @media screen and (max-width:400px) {
   .hero-title-text {
     font-size: 2rem;
